@@ -31,43 +31,43 @@ export const projects: Project[] = [
     images: [
       {
         id: 1,
-        url: "public/images/buck0.jpg",
+        url: "/images/buck0.jpg",
         alt: "Tragito principal",
         caption: "Vista principal del cóctel con iluminación dramática"
       },
       {
         id: 2,
-        url: "public/images/buck1.jpg",
+        url: "/images/buck1.jpg",
         alt: "Detalle del vaso",
         caption: "Detalle de la cristalería y texturas"
       },
       {
         id: 3,
-        url: "public/images/buck2.jpg",
+        url: "/images/buck2.jpg",
         alt: "Ambiente del bar",
         caption: "Contexto del ambiente donde se tomaron las fotos"
       },
       {
         id: 4,
-        url: "public/images/buck3.jpg",
+        url: "/images/buck3.jpg",
         alt: "Detalle del vaso",
         caption: "Detalle de la cristalería y texturas"
       },
       {
         id: 5,
-        url: "public/images/buck4.jpg",
+        url: "/images/buck4.jpg",
         alt: "Detalle del vaso",
         caption: "Detalle de la cristalería y texturas"
       },
       {
         id: 6,
-        url: "public/images/buck6.jpg",
+        url: "/images/buck6.jpg",
         alt: "Detalle del vaso",
         caption: "Detalle de la cristalería y texturas"
       },
       {
         id: 7,
-        url: "public/images/buck8.jpg",
+        url: "/images/buck8.jpg",
         alt: "Detalle del vaso",
         caption: "Detalle de la cristalería y texturas"
       },
@@ -89,7 +89,7 @@ export const projects: Project[] = [
         alt: "Video promocional de artista aérea",
         caption: "Video promocional mostrando técnicas aéreas",
         type: "video" as const,
-        poster: "public/videos/aerialartist.png",
+        poster: "/videos/aerialartist.png",
         youtubeId: "u22if1DNx7M" // Replace with actual YouTube video ID
       }
     ],
@@ -110,7 +110,7 @@ export const projects: Project[] = [
         alt: "Paisaje patagónico",
         caption: "Vista panorámica de los Andes patagónicos",
         type: "video" as const,
-        poster: "public/videos/taller.png",
+        poster: "/videos/taller.png",
         youtubeId: "DOee9sbMCGg" // Replace with actual YouTube video ID
       }
     ],
@@ -131,7 +131,7 @@ export const projects: Project[] = [
         alt: "Edificio moderno",
         caption: "Fachada de vidrio con patrones geométricos",
         type: "video" as const,
-        poster: "public/videos/ushuaia.png",
+        poster: "/videos/ushuaia.png",
         youtubeId: "nIXApZD0XPc" // Replace with actual YouTube video ID
       }
     ],
@@ -148,31 +148,31 @@ export const projects: Project[] = [
     images: [
       {
         id: 1,
-        url: "public/images/Trago0.jpg",
+        url: "/images/Trago0.jpg",
         alt: "Retrato en estudio",
         caption: "Iluminación profesional en estudio"
       },
       {
         id: 2,
-        url: "public/images/Trago1.jpg",
+        url: "/images/Trago1.jpg",
         alt: "Retrato en estudio",
         caption: "Iluminación profesional en estudio"
       },
       {
         id: 3,
-        url: "public/images/Trago2.jpg",
+        url: "/images/Trago2.jpg",
         alt: "Retrato en estudio",
         caption: "Iluminación profesional en estudio"
       },
       {
         id: 4,
-        url: "public/images/Trago3.jpg",
+        url: "/images/Trago3.jpg",
         alt: "Retrato en estudio",
         caption: "Iluminación profesional en estudio"
       },
       {
         id: 5,
-        url: "public/images/Trago4.jpg",
+        url: "/images/Trago4.jpg",
         alt: "Retrato en estudio",
         caption: "Iluminación profesional en estudio"
       }
