@@ -97,12 +97,12 @@ const Contacto = () => {
 
   const socialLinks = [
     { icon: Instagram, href: "https://www.instagram.com/lucasovejero/", label: "Instagram", color: "hover:text-gray-400" },
-    { icon: Youtube, href: "#", label: "Youtube", color: "hover:text-blue-300" },
+    { icon: Youtube, href: "https://www.youtube.com/@lucasovejero9", label: "Youtube", color: "hover:text-blue-300" },
     { icon: Linkedin, href: "#", label: "LinkedIn", color: "hover:text-blue-400" },    
   ];
 
   const contactInfo = [
-    { icon: Mail, label: "Email", value: "lucas@ejemplo.com" },
+    { icon: Mail, label: "Email", value: "lucasovejero9@gmail.com" },
     { icon: Phone, label: "Teléfono", value: "+54 9 2234 39-3154" },
     { icon: MapPin, label: "Ubicación", value: "Mar del Plata, Buenos Aires" },
   ];
