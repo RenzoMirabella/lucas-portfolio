@@ -67,7 +67,12 @@ const SobreMi = () => {
               {[
                 {
                   title: "Mis Cámaras",
-                  description: "Sony FX3. Sony A7III.",
+                  description: (
+                    <>
+                      Sony FX3.<br />
+                      Sony A7III.
+                    </>
+                  ),
                   imageUrl: "/images/camara.png" // Cambia por tu imagen
                 },
                 {
@@ -82,7 +87,12 @@ const SobreMi = () => {
                 },
                 {
                   title: "Lentes",
-                  description: "Sony 16-35 GM 2.8 Tamron 28-75 2.8",
+                  description: (
+                    <>
+                      Sony 16-35 GM 2.8<br />
+                     Tamron 28-75 2.8
+                    </>
+                  ),
                   imageUrl: "/images/lentes.png" // Cambia por tu imagen
                 }
               ].map((equipment, index) => (
