@@ -35,7 +35,7 @@ export const projects: Project[] = [
         alt: "Paisaje patagónico",
         caption: "Vista panorámica de los Andes patagónicos",
         type: "video" as const,
-        poster: "/videos/taller.png",
+        poster: "/images/melia.png",
         youtubeId: "6M9s6kGj850" // Replace with actual YouTube video ID
       }
     ],
