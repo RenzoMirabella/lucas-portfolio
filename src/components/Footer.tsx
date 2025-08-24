@@ -5,7 +5,7 @@ const Footer = () => {
   const socialLinks = [
     { icon: Instagram, href: "https://www.instagram.com/lucasovejero/", label: "Instagram" },
     { icon: Youtube, href: "https://www.youtube.com/@lucasovejero9", label: "YouTube" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/ovejerolucas/", label: "LinkedIn" },
   ];
 
   return (

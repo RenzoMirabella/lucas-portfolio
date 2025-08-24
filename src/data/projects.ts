@@ -24,6 +24,48 @@ export interface Project {
 // Datos de todos los proyectos
 export const projects: Project[] = [
   {
+    id: 6,
+    title: "Hotel Meliá",
+    description: "Video promocional para Hotel Meliá",
+    detailedDescription: "Video promocional para Hotel Meliá",
+    images: [
+      {
+        id: 1,
+        url: "", // No longer needed for YouTube videos
+        alt: "Paisaje patagónico",
+        caption: "Vista panorámica de los Andes patagónicos",
+        type: "video" as const,
+        poster: "/videos/taller.png",
+        youtubeId: "6M9s6kGj850" // Replace with actual YouTube video ID
+      }
+    ],
+    category: "Recoleta, Buenos Aires",
+    year: "2025",
+    tags: ["Geometría", "Abstracto", "Urbano"],
+    extraInfo: ""
+  },
+  {
+    id: 7,
+    title: "El Tren del Fin del Mundo",
+    description: "Video promocional para El Tren del Fin del Mundo",
+    detailedDescription: "Video promocional El Tren del Fin del Mundo",
+    images: [
+      {
+        id: 1,
+        url: "", // No longer needed for YouTube videos
+        alt: "Paisaje patagónico",
+        caption: "Vista panorámica de los Andes patagónicos",
+        type: "video" as const,
+        poster: "/videos/taller.png",
+        youtubeId: "0GUX8wM2TX8" // Replace with actual YouTube video ID
+      }
+    ],
+    category: "Ushuaia, Tierra del Fuego",
+    year: "2025",
+    tags: ["Geometría", "Abstracto", "Urbano"],
+    extraInfo: ""
+  },
+  {
     id: 1,
     title: "Buck",
     description: "Campaña para Drop III.",
@@ -196,4 +238,4 @@ export const getProjectById = (id: number): Project | undefined => {
 };
 
 // Configuración de trabajos destacados (fácil de modificar)
-export const FEATURED_PROJECT_IDS = [1, 2, 3, 4]; // Solo cambiar estos IDs para actualizar trabajos destacados
+export const FEATURED_PROJECT_IDS = [6, 2, 3, 4]; // Solo cambiar estos IDs para actualizar trabajos destacados

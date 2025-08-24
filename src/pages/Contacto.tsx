@@ -98,7 +98,7 @@ const Contacto = () => {
   const socialLinks = [
     { icon: Instagram, href: "https://www.instagram.com/lucasovejero/", label: "Instagram", color: "hover:text-gray-400" },
     { icon: Youtube, href: "https://www.youtube.com/@lucasovejero9", label: "Youtube", color: "hover:text-blue-300" },
-    { icon: Linkedin, href: "#", label: "LinkedIn", color: "hover:text-blue-400" },    
+    { icon: Linkedin, href: "https://www.linkedin.com/in/ovejerolucas/", label: "LinkedIn", color: "hover:text-blue-400" },    
   ];
 
   const contactInfo = [
@@ -116,7 +116,7 @@ const Contacto = () => {
             Hablemos
           </h1>
           <p className="text-xl text-portfolio-text-muted max-w-3xl mx-auto animate-slide-up">
-            ¿Tienes un proyecto en mente? Me encantaría escuchar tu idea y 
+            ¿Tenés un proyecto en mente? Me encantaría escuchar tu idea y 
             ayudarte a convertirla en realidad.
           </p>
         </div>
