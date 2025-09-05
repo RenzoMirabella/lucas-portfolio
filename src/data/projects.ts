@@ -259,4 +259,4 @@ export const getProjectById = (id: number): Project | undefined => {
 };
 
 // Configuración de trabajos destacados (fácil de modificar)
-export const FEATURED_PROJECT_IDS = [6, 2, 3, 4]; // Solo cambiar estos IDs para actualizar trabajos destacados
+export const FEATURED_PROJECT_IDS = [8, 6, 3, 4]; // Solo cambiar estos IDs para actualizar trabajos destacados
