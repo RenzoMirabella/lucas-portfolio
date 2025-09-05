@@ -24,6 +24,27 @@ export interface Project {
 // Datos de todos los proyectos
 export const projects: Project[] = [
   {
+    id: 8,
+    title: "Enduro Mar del Plata",
+    description: "Enduro Mar del Plata",
+    detailedDescription: "Enduro Mar del Plata",
+    images: [
+      {
+        id: 1,
+        url: "", // No longer needed for YouTube videos
+        alt: "Paisaje patagónico",
+        caption: "Vista panorámica de los Andes patagónicos",
+        type: "video" as const,
+        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/v1757033177/Timeline_1_01_02_16071_wzs58q.jpg",
+        youtubeId: "8zyzZ5FM0y4" // Replace with actual YouTube video ID
+      }
+    ],
+    category: "Mar del Plata, Buenos Aires",
+    year: "2025",
+    tags: ["Geometría", "Abstracto", "Urbano"],
+    extraInfo: ""
+  },
+  {
     id: 6,
     title: "Hotel Meliá",
     description: "Video promocional para Hotel Meliá",
