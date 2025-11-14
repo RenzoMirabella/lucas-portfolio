@@ -24,6 +24,48 @@ export interface Project {
 // Datos de todos los proyectos
 export const projects: Project[] = [
   {
+    id: 10,
+    title: "When the sun goes down",
+    description: "Proyecto personal",
+    detailedDescription: "Proyecto personal",
+    images: [
+      {
+        id: 1,
+        url: "", // No longer needed for YouTube videos
+        alt: "Paisaje patagónico",
+        caption: "Vista panorámica de los Andes patagónicos",
+        type: "video" as const,
+        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/v1763149255/delfiacantilados_iygpw9.jpg",
+        youtubeId: "1U11dWpJA7A" // Replace with actual YouTube video ID
+      }
+    ],
+    category: "Mar del Plata, Buenos Aires",
+    year: "2025",
+    tags: ["Geometría", "Abstracto", "Urbano"],
+    extraInfo: ""
+  },
+  {
+    id: 9,
+    title: "Sangucheria Richard X Planchetta",
+    description: "Video promocional para Sangucheria Richard X Planchetta",
+    detailedDescription: "Video promocional para Sangucheria Richard X Planchetta",
+    images: [
+      {
+        id: 1,
+        url: "", // No longer needed for YouTube videos
+        alt: "Paisaje patagónico",
+        caption: "Vista panorámica de los Andes patagónicos",
+        type: "video" as const,
+        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/v1763149001/Timeline_2_01_00_51_00_gxo9ct.jpg",
+        youtubeId: "ewPc5MwslWI" // Replace with actual YouTube video ID
+      }
+    ],
+    category: "Mar del Plata, Buenos Aires",
+    year: "2025",
+    tags: ["Geometría", "Abstracto", "Urbano"],
+    extraInfo: ""
+  },
+  {
     id: 8,
     title: "Enduro Mar del Plata",
     description: "Enduro Mar del Plata",
@@ -259,4 +301,4 @@ export const getProjectById = (id: number): Project | undefined => {
 };
 
 // Configuración de trabajos destacados (fácil de modificar)
-export const FEATURED_PROJECT_IDS = [8, 6, 3, 4]; // Solo cambiar estos IDs para actualizar trabajos destacados
+export const FEATURED_PROJECT_IDS = [10, 9, 8, 6]; // Solo cambiar estos IDs para actualizar trabajos destacados
