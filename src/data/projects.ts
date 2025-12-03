@@ -24,6 +24,48 @@ export interface Project {
 // Datos de todos los proyectos
 export const projects: Project[] = [
   {
+    id: 12,
+    title: "Voodoo Brewing Reignauguración",
+    description: "Video promocional para Voodoo Brewing",
+    detailedDescription: "Video promocional para Voodoo Brewing",
+    images: [
+      {
+        id: 1,
+        url: "", // No longer needed for YouTube videos
+        alt: "Paisaje patagónico",
+        caption: "Vista panorámica de los Andes patagónicos",
+        type: "video" as const,
+        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/v1764799061/voodoo_portada_xxr6oi.jpg",
+        youtubeId: "dHatGxwclWc" // Replace with actual YouTube video ID
+      }
+    ],
+    category: "Mar del Plata, Buenos Aires",
+    year: "2025",
+    tags: ["Geometría", "Abstracto", "Urbano"],
+    extraInfo: ""
+  },
+  {
+    id: 11,
+    title: "Vuelos - Video con Drone + 3D",
+    description: "Video para productora Vuelos",
+    detailedDescription: "Video para productora Vuelos",
+    images: [
+      {
+        id: 1,
+        url: "", // No longer needed for YouTube videos
+        alt: "Paisaje patagónico",
+        caption: "Vista panorámica de los Andes patagónicos",
+        type: "video" as const,
+        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/v1764799210/vuelos_portada_mk2xod.jpg",
+        youtubeId: "3c9pOMBAhqU" // Replace with actual YouTube video ID
+      }
+    ],
+    category: "Mar del Plata, Buenos Aires",
+    year: "2025",
+    tags: ["Geometría", "Abstracto", "Urbano"],
+    extraInfo: ""
+  },
+  {
     id: 10,
     title: "When the sun goes down",
     description: "Proyecto personal",
@@ -301,4 +343,4 @@ export const getProjectById = (id: number): Project | undefined => {
 };
 
 // Configuración de trabajos destacados (fácil de modificar)
-export const FEATURED_PROJECT_IDS = [10, 9, 8, 6]; // Solo cambiar estos IDs para actualizar trabajos destacados
+export const FEATURED_PROJECT_IDS = [10, 11, 12, 6]; // Solo cambiar estos IDs para actualizar trabajos destacados
