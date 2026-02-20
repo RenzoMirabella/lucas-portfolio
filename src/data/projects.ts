@@ -23,6 +23,90 @@ export interface Project {
 
 // Datos de todos los proyectos
 export const projects: Project[] = [
+  { 
+  id: 16,
+    title: "Aniversario 152 de Mar del Plata",
+    description: "Proyecto junto a @1874.mdq. Filmación y edición del proyecto.",
+    detailedDescription: "Proyecto personal. Dirección, filmación y edición.",
+    images: [
+      {
+        id: 1,
+        url: "", // No longer needed for YouTube videos
+        alt: "Paisaje patagónico",
+        caption: "Vista panorámica de los Andes patagónicos",
+        type: "video" as const,
+        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/v1771560013/Timeline_1_01_00_03_02_q6lkde.jpg",
+        youtubeId: "swE3y9wob64" // Replace with actual YouTube video ID
+      }
+    ],
+    category: "Mar del Plata, Buenos Aires",
+    year: "2025",
+    tags: ["Geometría", "Abstracto", "Urbano"],
+    extraInfo: ""
+  },
+  {
+    id: 15,
+    title: "The pursuit of myself",
+    description: "Proyecto personal. Dirección, filmación y edición.",
+    detailedDescription: "Proyecto personal. Dirección, filmación y edición.",
+    images: [
+      {
+        id: 1,
+        url: "", // No longer needed for YouTube videos
+        alt: "Paisaje patagónico",
+        caption: "Vista panorámica de los Andes patagónicos",
+        type: "video" as const,
+        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/v1771560013/Timeline_1_01_00_02_05_bxzple.jpg",
+        youtubeId: "swE3y9wob64" // Replace with actual YouTube video ID
+      }
+    ],
+    category: "Mar del Plata, Buenos Aires",
+    year: "2025",
+    tags: ["Geometría", "Abstracto", "Urbano"],
+    extraInfo: ""
+  },
+  {
+    id: 14,
+    title: "Publicidad Biomarketing",
+    description: "Dirección, filmación y edición de video promocional para Biomarketing",
+    detailedDescription: "Dirección, filmación y edición de video promocional para Biomarketing",
+    images: [
+      {
+        id: 1,
+        url: "", // No longer needed for YouTube videos
+        alt: "Paisaje patagónico",
+        caption: "Vista panorámica de los Andes patagónicos",
+        type: "video" as const,
+        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/v1771560013/Timeline_1_01_03_18_191_rsay95.jpg",
+        youtubeId: "z1QOa94naHw" // Replace with actual YouTube video ID
+      }
+    ],
+    category: "Mar del Plata, Buenos Aires",
+    year: "2026",
+    tags: ["Geometría", "Abstracto", "Urbano"],
+    extraInfo: ""
+  },
+  {
+    id: 13,
+    title: "VZ1 X Maxi Rodriguez",
+    description: "Filmación y edición de proyecto para colaboración VZ1 y Maxi Rodriguez",
+    detailedDescription: "Video colaboración para VZ1 y Maxi Rodriguez",
+    images: [
+      {
+        id: 1,
+        url: "", // No longer needed for YouTube videos
+        alt: "Paisaje patagónico",
+        caption: "Vista panorámica de los Andes patagónicos",
+        type: "video" as const,
+        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/v1771560013/polish_save_omnhs6.jpg",
+        youtubeId: "ohq5ue_z7jU" // Replace with actual YouTube video ID
+      }
+    ],
+    category: "Mar del Plata, Buenos Aires",
+    year: "2026",
+    tags: ["Geometría", "Abstracto", "Urbano"],
+    extraInfo: ""
+  },
   {
     id: 12,
     title: "Voodoo Brewing Reignauguración",
@@ -343,4 +427,4 @@ export const getProjectById = (id: number): Project | undefined => {
 };
 
 // Configuración de trabajos destacados (fácil de modificar)
-export const FEATURED_PROJECT_IDS = [10, 11, 12, 6]; // Solo cambiar estos IDs para actualizar trabajos destacados
+export const FEATURED_PROJECT_IDS = [16, 15, 13, 6]; // Solo cambiar estos IDs para actualizar trabajos destacados
