@@ -36,11 +36,11 @@ export const projects: Project[] = [
         caption: "Vista panorámica de los Andes patagónicos",
         type: "video" as const,
         poster: "https://res.cloudinary.com/derdgfqtd/image/upload/v1771560013/Timeline_1_01_00_03_02_q6lkde.jpg",
-        youtubeId: "swE3y9wob64" // Replace with actual YouTube video ID
+        youtubeId: "7JML1VACV1g" // Replace with actual YouTube video ID
       }
     ],
     category: "Mar del Plata, Buenos Aires",
-    year: "2025",
+    year: "2026",
     tags: ["Geometría", "Abstracto", "Urbano"],
     extraInfo: ""
   },
@@ -61,7 +61,7 @@ export const projects: Project[] = [
       }
     ],
     category: "Mar del Plata, Buenos Aires",
-    year: "2025",
+    year: "2026",
     tags: ["Geometría", "Abstracto", "Urbano"],
     extraInfo: ""
   },
@@ -88,9 +88,9 @@ export const projects: Project[] = [
   },
   {
     id: 13,
-    title: "VZ1 X Maxi Rodriguez",
-    description: "Filmación y edición de proyecto para colaboración VZ1 y Maxi Rodriguez",
-    detailedDescription: "Video colaboración para VZ1 y Maxi Rodriguez",
+    title: "BZ1 X Maxi Rodriguez",
+    description: "Filmación y edición de proyecto para colaboración BZ1 y Maxi Rodriguez",
+    detailedDescription: "Video colaboración para BZ1 y Maxi Rodriguez",
     images: [
       {
         id: 1,
