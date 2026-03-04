@@ -24,6 +24,27 @@ export interface Project {
 // Datos de todos los proyectos
 export const projects: Project[] = [
   { 
+  id: 17,
+    title: "Morenita - Video Publicitario",
+    description: "Video publicitario para @morenitaenchapa. Filmé, edité y realizé el sonido y colorgrading del proyecto.",
+    detailedDescription: "Video publicitario para @morenitaenchapa. Filmé, edité y realizé el sonido y colorgrading del proyecto.",
+    images: [
+      {
+        id: 1,
+        url: "", // No longer needed for YouTube videos
+        alt: "Paisaje patagónico",
+        caption: "Vista panorámica de los Andes patagónicos",
+        type: "video" as const,
+        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/v1772668062/IMG_9664_lknk5a.jpg",
+        youtubeId: "uS5SQ8M" // Replace with actual YouTube video ID
+      }
+      ],
+    category: "Mar del Plata, Buenos Aires",
+    year: "2026",
+    tags: ["Geometría", "Abstracto", "Urbano"],
+    extraInfo: ""
+  },
+  { 
   id: 16,
     title: "Aniversario 152 de Mar del Plata",
     description: "Proyecto junto a @1874.mdq. Filmación y edición del proyecto.",
