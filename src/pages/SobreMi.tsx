@@ -40,7 +40,7 @@ const SobreMi = () => {
               <div className="relative">
               <div className="w-full h-96 bg-gradient-to-br from-portfolio-accent/30 to-portfolio-accent/10 rounded-2xl overflow-hidden">
                   <img 
-                    src="/images/forro.jpeg" 
+                    src="/images/lucas_ovejero.jpeg" 
                     alt="Lucas Ovejero" 
                     className="w-full h-full object-cover"
                   />
