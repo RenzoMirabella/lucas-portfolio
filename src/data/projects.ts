@@ -36,7 +36,7 @@ export const projects: Project[] = [
         caption: "Vista panorámica de los Andes patagónicos",
         type: "video" as const,
         poster: "https://res.cloudinary.com/derdgfqtd/image/upload/v1772668062/IMG_9664_lknk5a.jpg",
-        youtubeId: "uS5SQ8M" // Replace with actual YouTube video ID
+        youtubeId: "Egu-uS5SQ8M" // Replace with actual YouTube video ID
       }
       ],
     category: "Mar del Plata, Buenos Aires",
