@@ -23,6 +23,27 @@ export interface Project {
 
 // Datos de todos los proyectos
 export const projects: Project[] = [
+    { 
+  id: 18,
+    title: "Cortometraje sobre Salud Mental y Depresión",
+    description: "Realicé este cortometraje sobre Salud Mental con gran impacto en redes. Guionizé, filmé, edité y lleve a cabo el sonido y colorgrading del proyecto.",
+    detailedDescription: "Realicé este cortometraje sobre Salud Mental con gran impacto en redes. Guionizé, filmé, edité y lleve a cabo el sonido y colorgrading del proyecto.",
+    images: [
+      {
+        id: 1,
+        url: "", // No longer needed for YouTube videos
+        alt: "Salud mental",
+        caption: "salud",
+        type: "video" as const,
+        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/q_auto/f_auto/v1776299299/Timeline_1_01_01_27_09_pa1znj.jpg",
+        youtubeId: "WEZAWSs66zk" // Replace with actual YouTube video ID
+      }
+      ],
+    category: "Mar del Plata, Buenos Aires",
+    year: "2026",
+    tags: ["Geometría", "Abstracto", "Urbano"],
+    extraInfo: ""
+  },
   { 
   id: 17,
     title: "Morenita - Video Publicitario",
@@ -448,4 +469,4 @@ export const getProjectById = (id: number): Project | undefined => {
 };
 
 // Configuración de trabajos destacados (fácil de modificar)
-export const FEATURED_PROJECT_IDS = [17, 16, 15, 13]; // Solo cambiar estos IDs para actualizar trabajos destacados
+export const FEATURED_PROJECT_IDS = [18, 17, 16, 15]; // Solo cambiar estos IDs para actualizar trabajos destacados
