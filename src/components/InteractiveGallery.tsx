@@ -1,47 +1,37 @@
-import { useState, useEffect } from 'react';
-import { ArrowLeft, ExternalLink } from 'lucide-react';
+import { useState } from 'react';
+import { Maximize2 } from 'lucide-react';
 import ProjectCarousel from './ProjectCarousel';
-import { projects, Project, ProjectImage } from '../data/projects';
+import { projects, Project, ProjectImage, getThumbnail, handleCardKeyDown } from '../data/projects';
+import { usePageTitle } from '@/hooks/use-page-title';
 
 
 
 const InteractiveGallery = () => {
+  usePageTitle('Trabajos');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  // Función universal para renderizar media (imagen o video)
-  const renderMedia = (media: ProjectImage, className: string = "") => {
-    const mediaType = media.type || 'image';
-    
-    if (mediaType === 'video' && media.youtubeId) {
-      return (
-        <div className={`relative w-full h-full ${className}`}>
-          <iframe
-            src={`https://www.youtube.com/embed/${media.youtubeId}?rel=0&modestbranding=1`}
-            title={media.alt}
-            className="w-full h-full object-cover"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-          {/* Play button overlay for visual indication */}
+  // Portada de la tarjeta: imagen liviana; el reproductor de YouTube se carga recién en el modal
+  const renderMedia = (media: ProjectImage, alt: string, className: string = "") => {
+    return (
+      <div className="relative w-full h-full">
+        <img
+          src={getThumbnail(media)}
+          alt={alt}
+          loading="lazy"
+          decoding="async"
+          className={`w-full h-full object-cover ${className}`}
+        />
+        {media.type === 'video' && (
+          /* Play button overlay for visual indication */
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <div className="bg-black/50 rounded-full p-4 opacity-70">
-              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M8 5v14l11-7z"/>
               </svg>
             </div>
           </div>
-        </div>
-      );
-    }
-    
-    // Default: render as image
-    return (
-      <img
-        src={media.url}
-        alt={media.alt}
-        className={`w-full h-full object-cover ${className}`}
-      />
+        )}
+      </div>
     );
   };
 
@@ -59,28 +49,15 @@ const InteractiveGallery = () => {
     setSelectedProject(null);
   };
 
-  // Vista de detalle del proyecto con carrusel
-  if (selectedProject) {
-    return (
-      <ProjectCarousel 
-        project={selectedProject} 
-        onClose={handleBackToGallery} 
-      />
-    );
-  }
-
-  // Vista de galería principal
+  // Vista de galería principal (el modal se abre encima, así no se pierde el scroll)
   return (
-    <div className="min-h-screen bg-portfolio-bg font-['Ancona_CD',_'Inter',_sans-serif] relative">
+    <div className="min-h-screen bg-portfolio-bg relative">
       <div className="container mx-auto px-4 py-20">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-portfolio-text mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-portfolio-text">
             Mis Proyectos
           </h1>
-          <p className="text-xl text-portfolio-text-muted max-w-3xl mx-auto">
-             
-          </p>
         </div>
 
         {/* Grid de proyectos */}
@@ -88,17 +65,22 @@ const InteractiveGallery = () => {
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className="group cursor-pointer animate-fade-in"
+              role="button"
+              tabIndex={0}
+              aria-label={`Ver ${project.title}`}
+              className="group cursor-pointer animate-fade-in focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-portfolio-accent focus-visible:ring-offset-2 focus-visible:ring-offset-portfolio-bg"
               style={{ animationDelay: `${index * 100}ms` }}
 
               onClick={() => handleProjectClick(project)}
+              onKeyDown={(e) => handleCardKeyDown(e, () => handleProjectClick(project))}
             >
               <div className="relative aspect-[4/3] rounded-none overflow-hidden bg-portfolio-surface border border-portfolio-border hover:border-portfolio-accent/50 transition-all duration-500 hover:shadow-portfolio-accent">
                 {/* Media (Imagen o Video) */}
                 {project.images && project.images.length > 0 ? (
                   <div className="w-full h-full overflow-hidden">
                     {renderMedia(
-                      project.images[0], 
+                      project.images[0],
+                      project.title,
                       "group-hover:scale-110 transition-transform duration-700"
                     )}
                   </div>
@@ -113,26 +95,26 @@ const InteractiveGallery = () => {
                   </div>
                 )}
 
-                {/* Overlay con información básica */}
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
-                  <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <h3 className="text-white text-xl font-bold mb-2">
+                {/* Overlay con información básica (siempre visible en pantallas táctiles) */}
+                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-all duration-300 flex flex-col justify-end p-6 touch:opacity-100 touch:bg-transparent touch:bg-gradient-to-t touch:from-black/80 touch:via-transparent touch:to-transparent touch:p-4">
+                  <div className="transform translate-y-4 group-hover:translate-y-0 group-focus-visible:translate-y-0 touch:translate-y-0 transition-transform duration-300">
+                    <h2 className="text-white text-xl font-bold mb-2 touch:text-lg touch:mb-0">
                       {project.title}
-                    </h3>
-                    <p className="text-white/80 text-sm mb-3">
+                    </h2>
+                    <p className="text-white/80 text-sm mb-3 touch:hidden">
                       {project.description}
                     </p>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between touch:hidden">
                       <span className="text-portfolio-accent text-sm font-medium">
                         {project.category}
                       </span>
-                      <ExternalLink size={16} className="text-white/60" />
+                      <Maximize2 size={16} className="text-white/60" aria-hidden="true" />
                     </div>
                   </div>
                 </div>
 
                 {/* Indicador de categoría */}
-                <div className="absolute top-4 left-4 bg-black/70 backdrop-blur-sm rounded-lg px-3 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute top-4 left-4 bg-black/70 backdrop-blur-sm rounded-lg px-3 py-1 opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 touch:opacity-100 transition-opacity duration-300">
                   <span className="text-white text-xs font-medium">{project.year}</span>
                 </div>
               </div>
@@ -141,7 +123,13 @@ const InteractiveGallery = () => {
         </div>
       </div>
 
-
+      {/* Vista de detalle del proyecto con carrusel */}
+      {selectedProject && (
+        <ProjectCarousel
+          project={selectedProject}
+          onClose={handleBackToGallery}
+        />
+      )}
     </div>
   );
 };

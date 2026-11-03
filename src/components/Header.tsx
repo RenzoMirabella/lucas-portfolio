@@ -32,7 +32,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full bg-portfolio-bg/80 backdrop-blur-md border-b border-portfolio-border">
       <div className="container mx-auto px-4 py-4">
         {/* Three-column layout */}
-        <div className="grid grid-cols-3 items-center">
+        <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-2">
           {/* Left: Navigation or Mobile Menu */}
           <div className="flex items-center justify-start">
             {isMobile ? (
@@ -56,7 +56,7 @@ const Header = () => {
                       <Link
                         to={path}
                         className={cn(
-                          "w-full cursor-pointer",
+                          "w-full cursor-pointer py-3",
                           isActive(path) 
                             ? "text-portfolio-accent bg-portfolio-surface" 
                             : "text-portfolio-text-muted hover:text-portfolio-accent hover:bg-portfolio-surface"
@@ -95,7 +95,7 @@ const Header = () => {
           <div className="flex justify-center">
             <Link 
               to="/" 
-              className="text-2xl font-bold text-portfolio-text hover:text-portfolio-accent transition-colors duration-300"
+              className="text-base sm:text-2xl font-bold whitespace-nowrap text-portfolio-text hover:text-portfolio-accent transition-colors duration-300"
               style={{ fontFamily: 'Michroma, sans-serif' }}
             >
               Lucas Ovejero
@@ -103,7 +103,7 @@ const Header = () => {
           </div>
 
           {/* Right: Social Icons */}
-          <div className="flex items-center space-x-4 justify-end">
+          <div className="flex items-center space-x-0 sm:space-x-4 justify-end">
             {socialLinks.map(({ icon: Icon, href, label }) => (
               <a
                 key={label}

@@ -1,3 +1,5 @@
+import type { KeyboardEvent } from 'react';
+
 // Interfaces para los datos de proyectos
 export interface ProjectImage {
   id: number;
@@ -26,13 +28,13 @@ export const projects: Project[] = [
     { 
   id: 18,
     title: "Cortometraje sobre Salud Mental y Depresión",
-    description: "Realicé este cortometraje sobre Salud Mental con gran impacto en redes. Guionizé, filmé, edité y lleve a cabo el sonido y colorgrading del proyecto.",
-    detailedDescription: "Realicé este cortometraje sobre Salud Mental con gran impacto en redes. Guionizé, filmé, edité y lleve a cabo el sonido y colorgrading del proyecto.",
+    description: "Realicé este cortometraje sobre Salud Mental con gran impacto en redes. Guionicé, filmé, edité y llevé a cabo el sonido y colorgrading del proyecto.",
+    detailedDescription: "Realicé este cortometraje sobre Salud Mental con gran impacto en redes. Guionicé, filmé, edité y llevé a cabo el sonido y colorgrading del proyecto.",
     images: [
       {
         id: 1,
         url: "", // No longer needed for YouTube videos
-        alt: "Salud mental",
+        alt: "Cortometraje sobre Salud Mental y Depresión",
         caption: "salud",
         type: "video" as const,
         poster: "https://res.cloudinary.com/derdgfqtd/image/upload/q_auto/f_auto/v1776299299/Timeline_1_01_01_27_09_pa1znj.jpg",
@@ -53,10 +55,10 @@ export const projects: Project[] = [
       {
         id: 1,
         url: "", // No longer needed for YouTube videos
-        alt: "Paisaje patagónico",
+        alt: "Morenita - Video Publicitario",
         caption: "Vista panorámica de los Andes patagónicos",
         type: "video" as const,
-        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/v1772668062/IMG_9664_lknk5a.jpg",
+        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/q_auto,f_auto,w_1200/v1772668062/IMG_9664_lknk5a.jpg",
         youtubeId: "Egu-uS5SQ8M" // Replace with actual YouTube video ID
       }
       ],
@@ -74,10 +76,10 @@ export const projects: Project[] = [
       {
         id: 1,
         url: "", // No longer needed for YouTube videos
-        alt: "Paisaje patagónico",
+        alt: "Aniversario 152 de Mar del Plata",
         caption: "Vista panorámica de los Andes patagónicos",
         type: "video" as const,
-        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/v1771560013/Timeline_1_01_00_03_02_q6lkde.jpg",
+        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/q_auto,f_auto,w_1200/v1771560013/Timeline_1_01_00_03_02_q6lkde.jpg",
         youtubeId: "7JML1VACV1g" // Replace with actual YouTube video ID
       }
     ],
@@ -95,10 +97,10 @@ export const projects: Project[] = [
       {
         id: 1,
         url: "", // No longer needed for YouTube videos
-        alt: "Paisaje patagónico",
+        alt: "The pursuit of myself",
         caption: "Vista panorámica de los Andes patagónicos",
         type: "video" as const,
-        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/v1771560013/Timeline_1_01_00_02_05_bxzple.jpg",
+        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/q_auto,f_auto,w_1200/v1771560013/Timeline_1_01_00_02_05_bxzple.jpg",
         youtubeId: "swE3y9wob64" // Replace with actual YouTube video ID
       }
     ],
@@ -116,10 +118,10 @@ export const projects: Project[] = [
       {
         id: 1,
         url: "", // No longer needed for YouTube videos
-        alt: "Paisaje patagónico",
+        alt: "Publicidad Biomarketing",
         caption: "Vista panorámica de los Andes patagónicos",
         type: "video" as const,
-        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/v1771560013/Timeline_1_01_03_18_191_rsay95.jpg",
+        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/q_auto,f_auto,w_1200/v1771560013/Timeline_1_01_03_18_191_rsay95.jpg",
         youtubeId: "z1QOa94naHw" // Replace with actual YouTube video ID
       }
     ],
@@ -137,10 +139,10 @@ export const projects: Project[] = [
       {
         id: 1,
         url: "", // No longer needed for YouTube videos
-        alt: "Paisaje patagónico",
+        alt: "BZ1 X Maxi Rodriguez",
         caption: "Vista panorámica de los Andes patagónicos",
         type: "video" as const,
-        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/v1771560013/polish_save_omnhs6.jpg",
+        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/q_auto,f_auto,w_1200/v1771560013/polish_save_omnhs6.jpg",
         youtubeId: "ohq5ue_z7jU" // Replace with actual YouTube video ID
       }
     ],
@@ -151,17 +153,17 @@ export const projects: Project[] = [
   },
   {
     id: 12,
-    title: "Voodoo Brewing Reignauguración",
+    title: "Voodoo Brewing Reinauguración",
     description: "Video promocional para Voodoo Brewing",
     detailedDescription: "Video promocional para Voodoo Brewing",
     images: [
       {
         id: 1,
         url: "", // No longer needed for YouTube videos
-        alt: "Paisaje patagónico",
+        alt: "Voodoo Brewing Reinauguración",
         caption: "Vista panorámica de los Andes patagónicos",
         type: "video" as const,
-        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/v1764799061/voodoo_portada_xxr6oi.jpg",
+        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/q_auto,f_auto,w_1200/v1764799061/voodoo_portada_xxr6oi.jpg",
         youtubeId: "dHatGxwclWc" // Replace with actual YouTube video ID
       }
     ],
@@ -179,10 +181,10 @@ export const projects: Project[] = [
       {
         id: 1,
         url: "", // No longer needed for YouTube videos
-        alt: "Paisaje patagónico",
+        alt: "Vuelos - Video con Drone + 3D",
         caption: "Vista panorámica de los Andes patagónicos",
         type: "video" as const,
-        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/v1764799210/vuelos_portada_mk2xod.jpg",
+        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/q_auto,f_auto,w_1200/v1764799210/vuelos_portada_mk2xod.jpg",
         youtubeId: "3c9pOMBAhqU" // Replace with actual YouTube video ID
       }
     ],
@@ -200,10 +202,10 @@ export const projects: Project[] = [
       {
         id: 1,
         url: "", // No longer needed for YouTube videos
-        alt: "Paisaje patagónico",
+        alt: "When the sun goes down",
         caption: "Vista panorámica de los Andes patagónicos",
         type: "video" as const,
-        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/v1763149255/delfiacantilados_iygpw9.jpg",
+        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/q_auto,f_auto,w_1200/v1763149255/delfiacantilados_iygpw9.jpg",
         youtubeId: "1U11dWpJA7A" // Replace with actual YouTube video ID
       }
     ],
@@ -221,10 +223,10 @@ export const projects: Project[] = [
       {
         id: 1,
         url: "", // No longer needed for YouTube videos
-        alt: "Paisaje patagónico",
+        alt: "Sangucheria Richard X Planchetta",
         caption: "Vista panorámica de los Andes patagónicos",
         type: "video" as const,
-        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/v1763149001/Timeline_2_01_00_51_00_gxo9ct.jpg",
+        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/q_auto,f_auto,w_1200/v1763149001/Timeline_2_01_00_51_00_gxo9ct.jpg",
         youtubeId: "ewPc5MwslWI" // Replace with actual YouTube video ID
       }
     ],
@@ -242,10 +244,10 @@ export const projects: Project[] = [
       {
         id: 1,
         url: "", // No longer needed for YouTube videos
-        alt: "Paisaje patagónico",
+        alt: "Enduro Mar del Plata",
         caption: "Vista panorámica de los Andes patagónicos",
         type: "video" as const,
-        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/v1757033177/Timeline_1_01_02_16071_wzs58q.jpg",
+        poster: "https://res.cloudinary.com/derdgfqtd/image/upload/q_auto,f_auto,w_1200/v1757033177/Timeline_1_01_02_16071_wzs58q.jpg",
         youtubeId: "8zyzZ5FM0y4" // Replace with actual YouTube video ID
       }
     ],
@@ -263,7 +265,7 @@ export const projects: Project[] = [
       {
         id: 1,
         url: "", // No longer needed for YouTube videos
-        alt: "Paisaje patagónico",
+        alt: "Hotel Meliá",
         caption: "Vista panorámica de los Andes patagónicos",
         type: "video" as const,
         poster: "/images/melia.png",
@@ -284,10 +286,10 @@ export const projects: Project[] = [
       {
         id: 1,
         url: "", // No longer needed for YouTube videos
-        alt: "Paisaje patagónico",
+        alt: "El Tren del Fin del Mundo",
         caption: "Vista panorámica de los Andes patagónicos",
         type: "video" as const,
-        poster: "/videos/taller.png",
+        poster: "https://i.ytimg.com/vi/0GUX8wM2TX8/maxresdefault.jpg",
         youtubeId: "0GUX8wM2TX8" // Replace with actual YouTube video ID
       }
     ],
@@ -380,7 +382,7 @@ export const projects: Project[] = [
       {
         id: 1,
         url: "", // No longer needed for YouTube videos
-        alt: "Paisaje patagónico",
+        alt: "Taller Ernalz",
         caption: "Vista panorámica de los Andes patagónicos",
         type: "video" as const,
         poster: "/videos/taller.png",
@@ -401,7 +403,7 @@ export const projects: Project[] = [
       {
         id: 1,
         url: "", // No longer needed for YouTube videos
-        alt: "Edificio moderno",
+        alt: "Drone Ushuaia",
         caption: "Fachada de vidrio con patrones geométricos",
         type: "video" as const,
         poster: "/videos/ushuaia.png",
@@ -416,37 +418,37 @@ export const projects: Project[] = [
   {
     id: 5,
     title: "Angelo’s Aspen",
-    description: "Fotografía de producto para el restaurante Angelo 's Aspen",
-    detailedDescription: "Fotografía de producto para el restaurante Angelo 's Aspen.",
+    description: "Fotografía de producto para el restaurante Angelo’s Aspen",
+    detailedDescription: "Fotografía de producto para el restaurante Angelo’s Aspen.",
     images: [
       {
         id: 1,
         url: "/images/Trago0.jpg",
-        alt: "Retrato en estudio",
+        alt: "Angelo’s Aspen, foto 1",
         caption: "Iluminación profesional en estudio"
       },
       {
         id: 2,
         url: "/images/Trago1.jpg",
-        alt: "Retrato en estudio",
+        alt: "Angelo’s Aspen, foto 2",
         caption: "Iluminación profesional en estudio"
       },
       {
         id: 3,
         url: "/images/Trago2.jpg",
-        alt: "Retrato en estudio",
+        alt: "Angelo’s Aspen, foto 3",
         caption: "Iluminación profesional en estudio"
       },
       {
         id: 4,
         url: "/images/Trago3.jpg",
-        alt: "Retrato en estudio",
+        alt: "Angelo’s Aspen, foto 4",
         caption: "Iluminación profesional en estudio"
       },
       {
         id: 5,
         url: "/images/Trago4.jpg",
-        alt: "Retrato en estudio",
+        alt: "Angelo’s Aspen, foto 5",
         caption: "Iluminación profesional en estudio"
       }
     ],
@@ -461,6 +463,22 @@ export const projects: Project[] = [
 // Función para obtener proyectos por IDs (para trabajos destacados)
 export const getFeaturedProjects = (featuredIds: number[]): Project[] => {
   return projects.filter(project => featuredIds.includes(project.id));
+};
+
+// Imagen de portada para tarjetas: el poster del video (o la miniatura de YouTube) o la foto
+export const getThumbnail = (media: ProjectImage): string => {
+  if (media.type === 'video') {
+    return media.poster || (media.youtubeId ? `https://i.ytimg.com/vi/${media.youtubeId}/hqdefault.jpg` : media.url);
+  }
+  return media.url;
+};
+
+// Abre la tarjeta con Enter o Espacio, igual que un botón
+export const handleCardKeyDown = (e: KeyboardEvent, open: () => void) => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    open();
+  }
 };
 
 // Función para obtener un proyecto por ID

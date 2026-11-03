@@ -1,8 +1,10 @@
 import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Home } from "lucide-react";
+import { usePageTitle } from "@/hooks/use-page-title";
 
 const NotFound = () => {
+  usePageTitle("Página no encontrada");
   const location = useLocation();
 
   useEffect(() => {
@@ -24,7 +26,7 @@ const NotFound = () => {
         </h1>
         
         <p className="text-portfolio-text-muted mb-8 leading-relaxed">
-          Lo siento, la página que estás buscando no existe o ha sido movida.
+          La página que buscás no existe o cambió de lugar.
         </p>
         
         <Link 

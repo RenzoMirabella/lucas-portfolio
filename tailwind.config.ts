@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 export default {
 	darkMode: ["class"],
@@ -20,6 +21,7 @@ export default {
 		extend: {
 			fontFamily: {
 				'sans': ['Inter', 'system-ui', 'sans-serif'],
+				'display': ['Michroma', 'Inter', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -96,15 +98,20 @@ export default {
 					'100%': { opacity: '1', transform: 'scale(1)' }
 				},
 				'glow': {
-					'0%, 100%': { boxShadow: '0 0 20px hsl(190, 100%, 50%, 0.2)' },
-					'50%': { boxShadow: '0 0 40px hsl(190, 100%, 50%, 0.4)' }
+					'0%, 100%': { boxShadow: '0 0 20px hsl(0, 0%, 100%, 0.05)' },
+					'50%': { boxShadow: '0 0 40px hsl(0, 0%, 100%, 0.1)' }
+				},
+				'marquee': {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(-50%)' }
 				}
 			},
 			animation: {
 				'fade-in': 'fade-in 0.6s ease-out',
 				'slide-up': 'slide-up 0.6s ease-out',
 				'scale-in': 'scale-in 0.3s ease-out',
-				'glow': 'glow 2s ease-in-out infinite'
+				'glow': 'glow 2s ease-in-out infinite',
+				'marquee': 'marquee 45s linear infinite'
 			},
 			transitionProperty: {
 				'smooth': 'var(--transition-smooth)',
@@ -112,5 +119,9 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+		require("tailwindcss-animate"),
+		// `touch:` aplica en pantallas sin hover (celulares y tablets)
+		plugin(({ addVariant }) => addVariant('touch', '@media (hover: none)')),
+	],
 } satisfies Config;
