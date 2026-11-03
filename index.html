@@ -2,7 +2,6 @@
 <html lang="es">
   <head>
     <link rel="icon" type="image/jpeg" href="/images/lucas_ovejero.jpeg" />
-    <link rel="canonical" href="https://lucasovejero.com/" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Google tag (gtag.js) -->
@@ -13,17 +12,17 @@
       gtag('js', new Date());
       gtag('config', 'G-6KDP01DLBF');
     </script>
-    <title>Lucas Ovejero | Filmmaker, Fotógrafo y Editor de Videos en Mar del Plata</title>
-    <meta name="description" content="Lucas Ovejero. Filmmaker, fotógrafo y editor de video de Mar del Plata, Buenos Aires, Argentina." />
+    <!-- Título, descripción y canonical de cada página: los escribe scripts/prerender.mjs desde src/lib/seo.ts -->
+    <!--seo-->
     <meta name="author" content="Lucas Ovejero" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
 
-    <meta property="og:title" content="Lucas Ovejero" />
-    <meta property="og:description" content="Lucas Ovejero. Filmmaker, fotógrafo y editor de video de Mar del Plata, Buenos Aires, Argentina." />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Lucas Ovejero" />
+    <meta property="og:locale" content="es_AR" />
     <meta property="og:image" content="https://i.imgur.com/AvDJIsx.jpeg" />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -32,21 +31,65 @@
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Lucas Ovejero",
-  "jobTitle": "Fotógrafo, Filmmaker y Editor de Video",
-  "url": "https://lucasovejero.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Mar del Plata",
-    "addressRegion": "Buenos Aires",
-    "addressCountry": "AR"
-  },
-  "description": "Filmmaker y fotógrafo profesional especializado en edición de video y contenido visual en Argentina.",
-  "sameAs": [
-    "https://www.instagram.com/lucasovejero/",
-    "https://www.youtube.com/@lucasovejero9",
-    "https://www.linkedin.com/in/ovejerolucas/"
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://www.lucasovejero.com/#lucas",
+      "name": "Lucas Ovejero",
+      "jobTitle": "Filmmaker, fotógrafo y editor de video",
+      "url": "https://www.lucasovejero.com/",
+      "image": "https://www.lucasovejero.com/images/lucas_ovejero.jpeg",
+      "email": "mailto:lucasovejero9@gmail.com",
+      "telephone": "+5492234393154",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mar del Plata",
+        "addressRegion": "Buenos Aires",
+        "addressCountry": "AR"
+      },
+      "description": "Filmmaker y fotógrafo de Mar del Plata, Argentina. Video publicitario para marcas, cobertura de grandes eventos y proyectos de autor en todo el país.",
+      "knowsAbout": ["Filmmaking", "Video publicitario", "Fotografía", "Edición de video", "Color grading", "Filmación con drone", "Cobertura de eventos"],
+      "sameAs": [
+        "https://www.instagram.com/lucasovejero/",
+        "https://www.youtube.com/@lucasovejero9",
+        "https://www.linkedin.com/in/ovejerolucas/"
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.lucasovejero.com/#servicio",
+      "name": "Lucas Ovejero · Filmmaker y Fotógrafo",
+      "url": "https://www.lucasovejero.com/",
+      "image": "https://www.lucasovejero.com/images/lucas_ovejero.jpeg",
+      "telephone": "+5492234393154",
+      "email": "lucasovejero9@gmail.com",
+      "founder": { "@id": "https://www.lucasovejero.com/#lucas" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mar del Plata",
+        "addressRegion": "Buenos Aires",
+        "addressCountry": "AR"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Mar del Plata" },
+        { "@type": "State", "name": "Buenos Aires" },
+        { "@type": "Country", "name": "Argentina" }
+      ],
+      "description": "Producción de video publicitario, contenido para marcas, cobertura de eventos, fotografía y filmación con drone. Base en Mar del Plata, trabajos en toda Argentina.",
+      "sameAs": [
+        "https://www.instagram.com/lucasovejero/",
+        "https://www.youtube.com/@lucasovejero9",
+        "https://www.linkedin.com/in/ovejerolucas/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.lucasovejero.com/#web",
+      "url": "https://www.lucasovejero.com/",
+      "name": "Lucas Ovejero",
+      "inLanguage": "es-AR",
+      "publisher": { "@id": "https://www.lucasovejero.com/#lucas" }
+    }
   ]
 }
 </script>

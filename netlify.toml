@@ -2,10 +2,12 @@
   publish = "build"
   command = "npm run build"
 
+# Cada página se prerenderiza como su propio .html (ver scripts/prerender.mjs).
+# Las rutas que no existen devuelven 404.html con estado 404, en vez de la home.
 [[redirects]]
   from = "/*"
-  to = "/index.html"
-  status = 200
+  to = "/404.html"
+  status = 404
 
 [build.environment]
   NODE_VERSION = "18"

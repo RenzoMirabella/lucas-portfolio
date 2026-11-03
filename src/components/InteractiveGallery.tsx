@@ -2,12 +2,10 @@ import { useState } from 'react';
 import { Maximize2 } from 'lucide-react';
 import ProjectCarousel from './ProjectCarousel';
 import { projects, Project, ProjectImage, getThumbnail, handleCardKeyDown } from '../data/projects';
-import { usePageTitle } from '@/hooks/use-page-title';
 
 
 
 const InteractiveGallery = () => {
-  usePageTitle('Trabajos');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   // Portada de la tarjeta: imagen liviana; el reproductor de YouTube se carga recién en el modal

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import BrandMarquee from "@/components/BrandMarquee";
 import { brands } from "@/data/brands";
-import { usePageTitle } from "@/hooks/use-page-title";
 
 const equipment = [
   {
@@ -27,7 +26,6 @@ const equipment = [
 ];
 
 const SobreMi = () => {
-  usePageTitle("Sobre mí");
 
   return (
     <div className="min-h-screen bg-portfolio-bg">
@@ -45,7 +43,7 @@ const SobreMi = () => {
               </span>
             </h1>
             <p className="mt-4 text-lg text-portfolio-text-muted">
-              Filmmaker, fotógrafo y editor de video en Mar del Plata.
+              Filmmaker, fotógrafo y editor de video. Con base en Mar del Plata, trabajo en todo el país.
             </p>
           </div>
 

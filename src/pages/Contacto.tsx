@@ -1,8 +1,6 @@
 import { Mail, MapPin, Phone, MessageCircle, Instagram, Youtube, Linkedin } from "lucide-react";
-import { usePageTitle } from "@/hooks/use-page-title";
 
 const Contacto = () => {
-  usePageTitle("Contacto");
 
   const socialLinks = [
     { icon: Instagram, href: "https://www.instagram.com/lucasovejero/", label: "Instagram" },

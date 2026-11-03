@@ -1,10 +1,8 @@
 import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Home } from "lucide-react";
-import { usePageTitle } from "@/hooks/use-page-title";
 
 const NotFound = () => {
-  usePageTitle("Página no encontrada");
   const location = useLocation();
 
   useEffect(() => {

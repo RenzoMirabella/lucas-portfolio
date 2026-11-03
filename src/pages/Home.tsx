@@ -3,10 +3,8 @@ import { Link } from "react-router-dom";
 import { Maximize2, Play } from "lucide-react";
 import ProjectCarousel from "../components/ProjectCarousel";
 import { getFeaturedProjects, getThumbnail, handleCardKeyDown, FEATURED_PROJECT_IDS, Project } from "../data/projects";
-import { usePageTitle } from "@/hooks/use-page-title";
 
 const Home = () => {
-  usePageTitle();
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   // Obtener proyectos destacados dinámicamente desde los datos compartidos
@@ -20,8 +18,11 @@ const Home = () => {
       {/* Featured Projects */}
       <section className="py-12">
         <div className="container mx-auto px-4">
+          {/* Título principal para buscadores y lectores de pantalla; visualmente el inicio arranca con los proyectos */}
+          <h1 className="sr-only">Lucas Ovejero, filmmaker y fotógrafo en Mar del Plata</h1>
+
           <div className="mb-8">
-            <h1 className="text-3xl font-bold text-portfolio-text">Proyectos Destacados</h1>
+            <h2 className="text-3xl font-bold text-portfolio-text">Proyectos Destacados</h2>
           </div>
 
           {/* Projects Grid - Matching Trabajos section style */}
@@ -60,9 +61,9 @@ const Home = () => {
                   {/* Hover Overlay with Description (always visible on touch screens) */}
                   <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-all duration-300 flex flex-col justify-end p-6 touch:opacity-100 touch:bg-transparent touch:bg-gradient-to-t touch:from-black/80 touch:via-transparent touch:to-transparent touch:p-4">
                     <div className="transform translate-y-4 group-hover:translate-y-0 group-focus-visible:translate-y-0 touch:translate-y-0 transition-transform duration-300">
-                      <h2 className="text-white text-xl font-bold mb-2 touch:text-lg touch:mb-0">
+                      <h3 className="text-white text-xl font-bold mb-2 touch:text-lg touch:mb-0">
                         {project.title}
-                      </h2>
+                      </h3>
                       <p className="text-white/80 text-sm mb-3 touch:hidden">
                         {project.description}
                       </p>
@@ -101,6 +102,12 @@ const Home = () => {
               Ver todos los proyectos
             </Link>
           </div>
+
+          {/* Presentación breve al pie: quién, qué y dónde, en texto que Google y las IA puedan leer */}
+          <p className="mt-16 max-w-2xl mx-auto text-center text-sm leading-relaxed text-portfolio-text-muted">
+            Lucas Ovejero, filmmaker y fotógrafo en Mar del Plata. Video publicitario y fotografía para marcas como
+            Hotel Meliá y PedidosYa, grandes eventos y proyectos de autor en todo el país.
+          </p>
         </div>
       </section>
 

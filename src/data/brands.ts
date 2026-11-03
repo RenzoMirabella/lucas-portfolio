@@ -8,6 +8,7 @@ export interface Brand {
 
 export const brands: Brand[] = [
   { name: "Hotel Meliá" },
+  { name: "PedidosYa" },
   { name: "El Tren del Fin del Mundo" },
   { name: "Voodoo Brewing" },
   { name: "Biomarketing" },
